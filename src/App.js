@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
 import EmailVerification from './pages/EmailVerification';
+import UserProfile from './pages/UserProfile';
 
 const App = () => (
   <Router>
@@ -16,6 +17,7 @@ const App = () => (
         <Route path="/" element={<HeroSection />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/profile" element={<UserProfile />} />
         <Route path="/verify-email/:uid/:token" element={<EmailVerification />} />
       </Routes>
       <Features />

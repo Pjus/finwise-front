@@ -1,21 +1,26 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../auth/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const { auth, logout } = useContext(AuthContext);
-
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    logout(); // 상태 초기화
+    navigate('/'); // 메인 페이지로 이동
+  };
   return (
     <header className="header">
       <div className="logo">FinWise</div>
       <nav className="nav-links">
-        <a href="#features">Features</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#Chart">Chart</a>
+        <a href="#Portfolio">Portfolio</a>
+        <a href="#Backtest">Backtest</a>
 
         {auth.isLoggedIn ? (
           <div className="user-info">
-            <span>Welcome, <strong>{auth.user.username}</strong></span>
-            <button className="logout-button" onClick={logout}>Log Out</button>
+            <span>Welcome, <strong><a href="/profile">{auth.user.username}</a></strong></span>
+            <button className="logout-button" onClick={handleLogout}>Log Out</button>
           </div>
         ) : (
           <>

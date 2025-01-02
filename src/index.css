@@ -304,3 +304,81 @@ header,
   transform: scale(0.95);
   /* 클릭 시 약간 축소 */
 }
+
+
+
+/* 폼 그룹 스타일 */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  /* 입력 필드 전체 너비 */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  /* 밝은 입력 배경 */
+  color: #333;
+  /* 텍스트 색상 */
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  /* 포커스 시 파란색 */
+  outline: none;
+}
+
+/* 텍스트 영역 높이 조정 */
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+/* 버튼 스타일 */
+.submit-button {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button:active {
+  background-color: #003d80;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px;
+    max-width: 90%;
+    /* 모바일 화면에 맞게 조정 */
+  }
+
+  .profile-container h1 {
+    font-size: 24px;
+  }
+}

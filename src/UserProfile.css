@@ -1,0 +1,169 @@
+/* 전체 레이아웃 */
+.profile-container {
+    display: flex;
+    height: 100vh;
+    /* 화면 높이 전체 */
+    background-color: #f1f3fa;
+}
+
+/* 전체 컨테이너 스타일 */
+.profile-container {
+    margin-top: 5%;
+    max-width: 100%;
+    /* 크기를 더 크게 */
+    margin: 50px auto;
+    /* 가운데 정렬 */
+    padding: 3%;
+    background-color: #f9f9f9;
+    /* 밝은 배경 */
+    color: #333;
+    /* 다크 텍스트 */
+    border-radius: 10px;
+    /* 둥근 모서리 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    /* 부드러운 그림자 */
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    /* 가벼운 테두리 */
+}
+
+/* 폼 제목 스타일 */
+.profile-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #007bff;
+    /* 파란색 강조 */
+}
+
+/* 사이드바 스타일 */
+.profile-sidebar {
+    width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 사용자 사진 */
+.profile-userpic img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    object-fit: cover;
+}
+
+/* 사용자 사진 */
+.profile-userpic svg {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    object-fit: cover;
+}
+
+/* 사용자 이름 및 직업 */
+.profile-usertitle h2 {
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.profile-usertitle h4 {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+}
+
+/* 버튼 스타일 */
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.profile-userbuttons .btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-userbuttons .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.profile-userbuttons .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.profile-userbuttons .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+.profile-userbuttons .btn-danger:hover {
+    background-color: #b02a37;
+}
+
+/* 메뉴 스타일 */
+.profile-usermenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-usermenu ul li {
+    border-bottom: 1px solid #f1f3fa;
+}
+
+.profile-usermenu ul li a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+
+    margin-right: 15px;
+    /* 오른쪽 여백 추가 */
+    font-size: 16px;
+    /* 아이콘 크기 */
+}
+
+.profile-usermenu ul li a i {
+    margin-right: 5px;
+}
+
+.profile-usermenu ul li a:hover {
+    background-color: #f9f9f9;
+    color: #007bff;
+}
+
+.profile-usermenu ul li.active a {
+    color: #007bff;
+    font-weight: bold;
+    background-color: #eef3f7;
+}
+
+/* 메인 콘텐츠 스타일 */
+.profile-main {
+    flex: 1;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.profile-main h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.profile-main p {
+    font-size: 16px;
+    color: #666;
+}

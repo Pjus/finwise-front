@@ -29,7 +29,6 @@ const LoginPage = () => {
         password: formData.password,
       });
       const { access_token, refresh_token } = response.data; // JWT 토큰
-      console.log(response.data);
       localStorage.setItem('accessToken', access_token);
       localStorage.setItem('refreshToken', refresh_token);
       setMessage('Login successful!');
