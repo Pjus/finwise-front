@@ -1,5 +1,6 @@
 /* 공통 설정 */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -10,11 +11,15 @@ body, html {
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* 화면 전체 높이를 차지 */
+  min-height: 100vh;
+  /* 화면 전체 높이를 차지 */
 }
 
-header, .hero-section, .features-section {
-  flex: 1; /* 컨텐츠가 중앙에 오도록 공간 분배 */
+header,
+.hero-section,
+.features-section {
+  flex: 1;
+  /* 컨텐츠가 중앙에 오도록 공간 분배 */
 }
 
 /* 헤더 스타일 */
@@ -154,4 +159,148 @@ header, .hero-section, .features-section {
 .auth-form button {
   width: 100%;
   margin-top: 1rem;
+}
+
+
+.login-button {
+  background-color: #4CAF50;
+  /* 녹색 배경 */
+  color: white;
+  /* 흰색 텍스트 */
+  border: none;
+  /* 테두리 제거 */
+  border-radius: 5px;
+  /* 둥근 모서리 */
+  padding: 10px 20px;
+  /* 여백 추가 */
+  font-size: 16px;
+  /* 글자 크기 */
+  cursor: pointer;
+  /* 클릭 가능한 커서 */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* 그림자 효과 */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* 전환 효과 */
+}
+
+.login-button:hover {
+  background-color: #45a049;
+  /* 마우스 오버 시 밝은 녹색 */
+  transform: scale(1.05);
+  /* 약간 확대 */
+}
+
+.login-button:active {
+  background-color: #397d3a;
+  /* 클릭 시 어두운 녹색 */
+  transform: scale(0.98);
+  /* 약간 축소 */
+}
+
+/* 전체 헤더 스타일 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* 좌우 정렬 */
+  align-items: center;
+  /* 수직 정렬 */
+  padding: 10px 20px;
+  /* 내부 여백 */
+  background-color: #f8f9fa;
+  /* 연한 배경색 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* 그림자 효과 */
+  font-family: Arial, sans-serif;
+  /* 폰트 설정 */
+}
+
+.nav-links {
+  display: flex;
+  /* 가로로 정렬 */
+  align-items: center;
+  /* 세로 가운데 정렬 */
+  gap: 20px;
+  /* 요소 사이의 간격 */
+}
+
+.nav-links a {
+  text-decoration: none;
+  /* 밑줄 제거 */
+  color: #007bff;
+  /* 파란색 텍스트 */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links span {
+  margin-left: 20px;
+  /* Welcome과 이전 요소 사이에 간격 추가 */
+  color: #343a40;
+  /* 어두운 회색 텍스트 */
+  font-size: 16px;
+}
+
+.nav-links button {
+  margin-left: 10px;
+  /* Log Out 버튼과 Welcome 사이의 간격 */
+  background-color: #dc3545;
+  /* 빨간색 배경 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+/* 사용자 정보 영역 스타일 */
+.user-info {
+  display: flex;
+  align-items: center;
+  /* 수직 정렬 */
+  font-size: 16px;
+  color: #343a40;
+  /* 어두운 회색 텍스트 */
+}
+
+/* 사용자 이름 강조 */
+.user-info strong {
+  color: #007bff;
+  /* 파란색 */
+}
+
+/* 로그아웃 버튼 스타일 */
+.logout-button {
+  background-color: #dc3545;
+  /* 빨간색 배경 */
+  color: white;
+  /* 흰색 텍스트 */
+  border: none;
+  /* 테두리 제거 */
+  border-radius: 5px;
+  /* 둥근 모서리 */
+  padding: 5px 10px;
+  /* 버튼 내부 여백 */
+  margin-left: 10px;
+  /* 텍스트와 버튼 간격 */
+  cursor: pointer;
+  /* 클릭 가능한 커서 */
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* 전환 효과 */
+}
+
+.logout-button:hover {
+  background-color: #000000;
+  transform: scale(1.05);
+  /* 호버 시 약간 확대 */
+}
+
+.logout-button:active {
+  background-color: #3b3b3b;
+  transform: scale(0.95);
+  /* 클릭 시 약간 축소 */
 }

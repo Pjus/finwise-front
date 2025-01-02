@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import api from '../api';
+import { AuthContext } from '../auth/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
+  const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -24,10 +28,14 @@ const LoginPage = () => {
         username: formData.username,
         password: formData.password,
       });
-      const { access, refresh } = response.data; // JWT 토큰
-      localStorage.setItem('accessToken', access);
-      localStorage.setItem('refreshToken', refresh);
+      const { access_token, refresh_token } = response.data; // JWT 토큰
+      console.log(response.data);
+      localStorage.setItem('accessToken', access_token);
+      localStorage.setItem('refreshToken', refresh_token);
       setMessage('Login successful!');
+      login(response.data); // 로그인 상태 업데이트
+      navigate('/'); // 로그인 후 대시보드로 이동
+
     } catch (error) {
       setMessage('Login failed. Please check your email and password.');
       console.error(error.response.data);
@@ -58,7 +66,7 @@ const LoginPage = () => {
             required
           />
         </label>
-        <button type="submit">Log In</button>
+        <button className="login-button" type="submit">Log In</button>
       </form>
       {message && <p>{message}</p>}
     </div>
