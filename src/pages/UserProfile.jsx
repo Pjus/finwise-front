@@ -86,19 +86,25 @@ const UserProfile = () => {
                 {/* 메뉴 */}
                 <div className="profile-usermenu">
                     <ul>
-                        <li className={activeMenu === "Overview" ? "active" : ""}>
-                            <a href="#" onClick={() => handleMenuClick("Overview")}>
-                                <i className="fa fa-home"></i> Overview
-                            </a>
-                        </li>
                         <li className={activeMenu === "Account Settings" ? "active" : ""}>
                             <a href="#" onClick={() => handleMenuClick("Account Settings")}>
                                 <i className="fa fa-cog"></i> Account Settings
                             </a>
                         </li>
-                        <li className={activeMenu === "Tasks" ? "active" : ""}>
-                            <a href="#" onClick={() => handleMenuClick("Tasks")}>
-                                <i className="fa fa-tasks"></i> Tasks
+                        <li className={activeMenu === "Dashboard" ? "active" : ""}>
+                            <a href="#" onClick={() => handleMenuClick("Dashboard")}>
+                                <i class="fa fa-line-chart"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li className={activeMenu === "Portfolio" ? "active" : ""}>
+                            <a href="#" onClick={() => handleMenuClick("Portfolio")}>
+                                <i className="fa fa-tasks"></i> Portfolio
+                            </a>
+                        </li>
+                        <li className={activeMenu === "Watchlist" ? "active" : ""}>
+                            <a href="#" onClick={() => handleMenuClick("Watchlist")}>
+                                <i className="fa fa-tasks"></i> Watchlist
                             </a>
                         </li>
                         <li className={activeMenu === "Help" ? "active" : ""}>
@@ -107,14 +113,14 @@ const UserProfile = () => {
                             </a>
                         </li>
                     </ul>
-                </div>
-            </div>
+                </div >
+            </div >
             {/* 메인 콘텐츠 */}
-            <div className="profile-main">
+            <div div className="profile-main" >
                 <h1>Welcome to your profile</h1>
                 <p>Here you can manage your account settings, tasks, and more.</p>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 

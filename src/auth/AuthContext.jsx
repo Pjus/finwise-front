@@ -18,6 +18,9 @@ export const AuthProvider = ({ children }) => {
     const logout = () => {
         setAuth({ isLoggedIn: false, user: null });
         localStorage.removeItem('auth'); // localStorage에서 삭제
+        localStorage.removeItem('accessToken');
+        localStorage.removeItem('refreshToken');
+        window.location.reload(); // 앱 상태 초기화
     };
 
     // 새로고침 시 상태 복원
